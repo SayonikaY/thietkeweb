@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "name": "Lập trình C",
+        "video-id": "87SH2Cn0s9A",
+        "duration": "4 tiếng",
+        "price": 0
+    },
+    {
+        "id": "2",
+        "name": "Lập trình C++",
+        "video-id": "-TkoO8Z07hI",
+        "duration": "6 tiếng",
+        "price": 0
+    },
+    {
+        "id": "3",
+        "name": "Lập trình Python",
+        "video-id": "XKHEtdqhLK8",
+        "duration": "12 tiếng",
+        "price": 0
+    },
+    {
+        "id": "4",
+        "name": "Lập trình Javascript",
+        "video-id": "8dWL3wF_OMw",
+        "duration": "8 tiếng",
+        "price": 0
+    },
+    {
+        "id": "5",
+        "name": "Lập trình Java",
+        "video-id": "xk4_1vDrzzo",
+        "duration": "12 tiếng",
+        "price": 0
+    },
+    {
+        "id": "6",
+        "name": "Lập trình C#",
+        "video-id": "wxznTygnRfQ",
+        "duration": "4 tiếng",
+        "price": 0
+    },
+    {
+        "id": "7",
+        "name": "Lập trình PHP",
+        "video-id": "zZ6vybT1HQs",
+        "duration": "4 tiếng",
+        "price": 0
+    },
+    {
+        "id": "8",
+        "name": "Cấu trúc dữ liệu và giải thuật",
+        "video-id": "CBYHwZcbD-s",
+        "duration": "4 tiếng",
+        "price": 0
+    }
+]
