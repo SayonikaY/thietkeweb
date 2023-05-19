@@ -1,4 +1,18 @@
+#header-banner {
+    height: 400px;
+    background-image: url('/img/banner.webp');
+    background-size: cover;
+}
+
 .nav-item {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#courses-list {
+    background-color: rgb(235, 182, 113);
+}
+
+#contact-form {
+    background-color: rgb(243, 224, 58);
 }
