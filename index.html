@@ -1,14 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đồ án thiết kế web</title>
+
+    <!-- Sử dụng Bootstrap framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <p>Hello world</p>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom bg-light-subtle">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="/">
+                    <span class="fw-bold fs-4">Trung tâm tin học</span>
+                </a>
+            </div>
+            <div class="bd-navbar-toggle">
+                <button class="navbar-toggler pd-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                    <svg class="bi" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="navbar-content" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav nav text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <svg class="bi bi-house-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses-list">Khoá học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teachers-list">Giảng viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-form">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Danh sách các khoá học online -->
+            <section id="courses-list" class="pt-5">
+                <div class="container">
+                    <div class="d-flex row text-center pt-4">
+                        <h1 class="text-uppercase fw-bold">Các khoá học online miễn phí</h1>
+                    </div>
+                    <div class="album py-5">
+                        <div id="courses-album" class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Danh sách các giảng viên -->
+            <section id="teachers-list" class="pt-5">
+                <div class="container">
+                    <div class="d-flex row text-center pt-4">
+                        <h1 class="text-uppercase fw-bold">Đội ngũ giảng viên</h1>
+                    </div>
+                    <div id="teachers-album" class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Điền form để liên hệ -->
+            <section id="contact-form"  class="pt-5">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="d-flex row text-center pt-4">
+                            <h1 class="text-uppercase fw-bold">Liên hệ</h1>
+                        </div>
+                    </div>
+                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                        <div class="col-lg-6">
+                            <form data-sb-form-api-token="">
+                                <!-- Nhập tên -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="contact-name" type="text" data-sb-validations="required">
+                                    <label for="contact-name">Tên</label>
+                                    <div class="invalid-feedback" data-sb-feedback="contact-name:required">Xin vui lòng nhập tên của bạn.</div>
+                                </div>
+                                <!-- Nhập địa chỉ email -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="contact-email" type="email" data-sb-validations="required,email">
+                                    <label for="contact-email">Địa chỉ email</label>
+                                    <div class="invalid-feedback" data-sb-feedback="contact-email:required">Xin vui lòng nhập địa chỉ email của bạn.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="contact-email:email">Địa chỉ email không hợp lệ.</div>
+                                </div>
+                                <!-- Nhập số điện thoại -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="contact-phone" type="tel" data-sb-validations="required">
+                                    <label for="contact-phone">Số điện thoại</label>
+                                    <div class="invalid-feedback" data-sb-feedback="contact-phone:required">Xin vui lòng nhập số điện thoại của bạn.</div>
+                                </div>
+                                <!-- Nhập tin nhắn -->
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="contact-message" type="text" style="height: 10rem" data-sb-validations="required"></textarea>
+                                    <label for="contact-message">Tin nhắn</label>
+                                    <div class="invalid-feedback" data-sb-feedback="contact-message:required">Xin vui lòng nhập tin nhắn.</div>
+                                </div>
+
+                                <!-- Gửi thành công -->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder"><p>Đã gửi thành công!</p></div>
+                                    </div>
+                                </div>
+
+                                <!-- Gửi thất bại -->
+                                <div class="d-none" id="submitErrorMessage">
+                                    <div class="text-center text-danger mb-3">
+                                        <div class="fw-bolder"><p>Gửi thất bại!</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-xl rounded-pill disabled" id="submitButton" type="submit">Gửi</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-body-secondary py-5 bg-dark-subtle">
+        <div class="container">
+            <h5>Thành viên nhóm:</h5>
+            <ul>
+                <li><h5 class="mb-1">Mai Quốc Huy (2001221670)</h5></li>
+                <li><h5 class="mb-1">Nguyễn Gia Huy (2001221654)</h5></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Sử dụng jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- Sử dụng Bootstrap framework -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- Sử dụng Bootstrap framework SB Forms JS -->
+    <script src="https://cdn.startbootstrap.com/sb-forms-0.4.1.js"></script>
+
+    <!-- Main script -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
