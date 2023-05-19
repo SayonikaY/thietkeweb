@@ -1,6 +1,6 @@
 #header-banner {
     height: 400px;
-    background-image: url('/img/banner.webp');
+    background-image: url('../img/banner.webp');
     background-size: cover;
 }
 
